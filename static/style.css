@@ -1,0 +1,127 @@
+body{
+  background-color: #3f3f3f !important;
+}
+
+p{
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+#index_heading{
+  margin-left: 2%;
+}
+
+#sign_in{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#head_song{
+  padding-left: 3%;
+  background-color: #1DB954;
+  color: white;
+  font-size: larger;
+}
+
+#link_song{
+  padding-left: 4%;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: large;
+}
+
+#input{
+  background-color: #1DB954;
+  border-color: black;
+  color: white;
+}
+
+#link_delete{
+  background-color: #1DB954;
+  border-color: black;
+  color: white;
+  position: absolute;
+  right: 0px;
+  margin-right: 1%;
+}
+
+#play_buttons{
+  background-color: #1DB954;
+  border-color: black;
+  color: white;
+  margin-top: 1%;
+  margin-left:1%;
+  width: 200px;
+  font-size: large;
+}
+
+#play_items{
+  margin-left: 1%;
+}
+
+#search_button{
+  margin-left: 1%;
+  margin-top: 5px;
+}
+
+#search, #link{
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-right: 50px !important;
+}
+
+#error_message{
+  margin-left: 1%;
+  color: red;
+}
+
+#device_button{
+  background-color: #1DB954;
+  border-color: black;
+  color: white;
+  margin-left:10%;
+  max-height: 40px;
+  min-height: 40px;
+}
+
+#spotify_logo{
+  max-height: 70px;
+  max-width: 233px;
+}
+
+header{
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.btn-primary{
+  background-color: #1DB954;
+  border: #1DBA54;
+}
+
+.form-inline{
+  margin-right: 3% !important;
+}
+
+.header_link{
+  font-size: x-large;
+  background-color: #1DB954;
+  color: white;
+}
+
+form.select_device{
+  display: inline-block;
+}
+
+form.add_link{
+  margin-left: 1%;
+}
+
+form.delete_song{
+  margin-left: 1% !important;
+}

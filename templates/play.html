@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+<!doctype  html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+{% endblock %}
+
+{% block content %}
+
+{% if caught_error %}
+<h2 id='error_message'>There was an error, try again</h2>
+{% endif %}
+<form method = "POST">
+    <!-- <label for="search">Search a Song</label> -->
+    <input type="submit" id='play_buttons' name='submit' value='Start'/>
+    <input type="submit" id='play_buttons' name='stop' value='Stop'/>
+</form>
+
+<div id="play_items">
+<h2>Selected Device: {{device_name}}</h2>
+
+{% set count = namespace(value=0) %}
+
+
+<form method = 'POST' class='select_device'>   
+    <p>Select a Device to Play</p>
+    <div class="input-group">
+
+        <select class="form-select" aria-label="Default select example" name='devices'>
+            {% for device in devices %}
+                <option value={{count.value}}>{{device['name']}}</option>
+                {% set count.value = count.value + 1 %}
+                {% endfor %}
+        </select>
+
+        <span class="input-group-btn">
+            <button id='device_button'>Submit</button>
+        </span>
+
+    </div>
+</form>
+  <br>
+</div>
+
+</html>
+
+{% endblock %}
