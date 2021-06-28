@@ -25,7 +25,6 @@ from flask_session import Session
 import spotipy as sp
 import uuid
 import json
-#import functools
 from werkzeug.security import check_password_hash, generate_password_hash
 import time
 import threading
