@@ -22,6 +22,7 @@ Run app.py
 import os
 from flask import Flask, session, request, redirect, render_template, url_for, Blueprint, flash, g
 from flask_session import Session
+from dotenv import load_dotenv
 import spotipy as sp
 import uuid
 import json
@@ -33,6 +34,7 @@ import ctypes
 from link2.db import get_db
 
 bp = Blueprint('main', __name__, url_prefix='/')
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(64)
@@ -43,8 +45,8 @@ Session(app)
 PORT = 5000
 SCOPE = 'user-read-currently-playing playlist-modify-private playlist-modify-public streaming user-modify-playback-state user-read-playback-state'
 
-os.environ['SPOTIPY_CLIENT_ID'] = 'dcc9a366ac244d9cba2a95a9cd48116f'
-os.environ['SPOTIPY_CLIENT_SECRET'] = '600dd3ceb8504e868b391e5806d87cf1'
+os.environ['SPOTIPY_CLIENT_ID'] = os.getenv('SPOTIPY_CLIENT_ID')
+os.environ['SPOTIPY_CLIENT_SECRET'] = os.getenv('SPOTIPY_CLIENT_SECRET')
 os.environ['SPOTIPY_REDIRECT_URI'] = 'http://127.0.0.1:5000'
 
 caches_folder = './.spotify_caches/'
