@@ -45,9 +45,10 @@ Session(app)
 PORT = 5000
 SCOPE = 'user-read-currently-playing playlist-modify-private playlist-modify-public streaming user-modify-playback-state user-read-playback-state'
 
-os.environ['SPOTIPY_CLIENT_ID'] = os.getenv('SPOTIPY_CLIENT_ID')
-os.environ['SPOTIPY_CLIENT_SECRET'] = os.getenv('SPOTIPY_CLIENT_SECRET')
-os.environ['SPOTIPY_REDIRECT_URI'] = 'http://127.0.0.1:5000'
+# os.environ['SPOTIPY_CLIENT_ID'] = os.getenv('SPOTIPY_CLIENT_ID')
+# os.environ['SPOTIPY_CLIENT_SECRET'] = os.getenv('SPOTIPY_CLIENT_SECRET')
+# os.environ['SPOTIPY_REDIRECT_URI']= 'http://127.0.0.1:5000'
+os.environ['SPOTIPY_REDIRECT_URI'] = 'https://spotify-linked-songs.herokuapp.com/'
 
 caches_folder = './.spotify_caches/'
 if not os.path.exists(caches_folder):
