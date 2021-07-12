@@ -31,7 +31,7 @@ import time
 import threading
 import ctypes
 
-from link2.db import get_db
+from .db import get_db
 
 bp = Blueprint('main', __name__, url_prefix='/')
 load_dotenv()
