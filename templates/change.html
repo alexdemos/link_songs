@@ -23,7 +23,7 @@
 <form>
 {% for playlist in playlists %}
 
-    <div class="row">
+    <div class="row" id='button_container'>
         <!-- <a href='/'> -->
             <button id="button" type="button" class="btn btn-primary btn-block" value={{ count.value }} name= {{ count.value }}>
             {% set count.value = count.value + 1 %}

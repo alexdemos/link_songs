@@ -4,6 +4,6 @@ $(document).ready(function(){
       console.log(value);
       $.post('./change',
             { 'value': value })
-      setTimeout(() => {window.location.href = '/'},500)   
+      setTimeout(() => {window.location.href = '/'},1000)   
     });
   });

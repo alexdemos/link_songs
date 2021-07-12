@@ -379,6 +379,7 @@ def change():
         session['current_playlist'] = chosen_playlist['name']
         session['current_playlist_id'] = chosen_playlist['id']
         session['current_playlist_uri'] = chosen_playlist['uri']
+        print(session['current_playlist'])
 
     return render_template('change.html', playlists=playlists)
 
