@@ -31,7 +31,7 @@ import time
 import threading
 import ctypes
 
-from db import get_db
+from .db import get_db
 
 bp = Blueprint('main', __name__, url_prefix='/')
 load_dotenv()
@@ -456,4 +456,4 @@ def get_link_song(l_id):
     return song
 
 if __name__ == "__main__":
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True)
