@@ -31,5 +31,3 @@ def create_app(test_config=None):
     app.register_blueprint(main.bp)
 
     return app
-
-    return app
